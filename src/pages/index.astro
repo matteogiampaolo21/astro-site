@@ -1,11 +1,66 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+const image1 = '/images/adam-kool-ndN00KmbJ1c-unsplash.jpg';
+const image2 = '/images/luca-bravo-VowIFDxogG4-unsplash.jpg';
+const image3 = '/images/neom-gOqBe7ropxM-unsplash.jpg'
+
+const fillerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut libero aliquam officiis at harum ab.";
 ---
 
-<Layout title="Astro">
-	<section class="bg-red-300 ">
-		<h1>this is the homepage.</h1>
-	</section>
+<Layout title="Home">
+	<div>
+		<section style="height: 93vh;" class="bg-gray-100 grid grid-cols-2 justify-center  ">
+			<div class="typer-container flex flex-col justify-center my-10 ml-32 mr-20">
+				<h1 class="typed text-5xl py-5 text-slate-700 font-bold">We fight for you.</h1>
+				<p class="text-neutral-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum fuga sunt, deleniti ducimus atque explicabo minima. Dicta aut recusandae veniam beatae voluptate reiciendis aspernatur eos unde molestiae nobis, minima ullam.</p>
+				<button class="bg-red-500 text-white w-32 py-2 rounded-sm mt-5">Contact Us</button>
+			</div>
+			<div>
+				
+			</div>
+		</section>
+
+		<section class="bg-slate-800 grid grid-cols-3 justify-center">
+			<div class="bg-red-500 col-span-2"></div>
+			<div class="text-zinc-200 my-16 mx-auto w-96">
+				<h1 class="text-3xl font-bold">Random text.</h1>
+				<p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ipsa earum blanditiis voluptas quos distinctio debitis ullam atque sit nobis. Ipsa, eius ut labore nihil cumque eaque qui nemo accusantium.</p><br>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque veritatis aut deserunt. Quam ratione consequuntur autem? Quis doloribus at eius aut deleniti inventore iure laboriosam.</p><br>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, quo consectetur molestiae voluptatibus numquam alias. Facilis eveniet quibusdam, accusamus totam numquam sint rem placeat rerum quos excepturi nesciunt, quae hic maiores velit!</p>
+			</div>
+		</section>
+
+		<section class="bg-gray-200">
+			<div class="text-center py-24 ">
+				<h3 class="text-2xl text-slate-700 font-bold">Take your Pick</h3>
+				<p class="text-neutral-500 mt-3">Lorem ipsum dolor sit amet consectetur.</p>
+			</div>
+			<div class="grid grid-cols-3 gap-12 justify-evenly mx-auto pb-64 w-1280">
+
+				<Card 
+					href={image1}
+					title='Card 1'
+					body={fillerText}
+				/>
+				<Card
+					href={image2}
+					title='Card 2'
+					body={fillerText}
+				/>
+				<Card 
+					href={image3}
+					title='Card 3'
+					body={fillerText}
+				/>
+
+			</div>
+		</section>
+
+		<section>
+
+		</section>
+	</div>
 </Layout>
 
 	
