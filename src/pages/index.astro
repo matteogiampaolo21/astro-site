@@ -3,16 +3,21 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 const image1 = '/images/adam-kool-ndN00KmbJ1c-unsplash.jpg';
 const image2 = '/images/luca-bravo-VowIFDxogG4-unsplash.jpg';
-const image3 = '/images/neom-gOqBe7ropxM-unsplash.jpg'
+const image3 = '/images/neom-gOqBe7ropxM-unsplash.jpg';
+const image4 = '/images/nathan-dumlao-zUNs99PGDg0-unsplash.jpg'
 
 const fillerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut libero aliquam officiis at harum ab.";
+
+import { Image } from '@astrojs/image/components';
+
+
 ---
 
 <Layout title="Home">
 	<div>
 		<section style="height: 93vh;" class="bg-gray-100 grid grid-cols-2 justify-center  ">
 			<div class="typer-container flex flex-col justify-center my-10 ml-32 mr-20">
-				<h1 class="typed text-5xl py-5 text-slate-700 font-bold">We fight for you.</h1>
+				<h1 class="typed text-5xl py-5 text-slate-700 font-bold ">We fight for you.</h1>
 				<p class="text-neutral-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum fuga sunt, deleniti ducimus atque explicabo minima. Dicta aut recusandae veniam beatae voluptate reiciendis aspernatur eos unde molestiae nobis, minima ullam.</p>
 				<button class="bg-red-500 text-white w-32 py-2 rounded-sm mt-5">Contact Us</button>
 			</div>
@@ -23,8 +28,8 @@ const fillerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
 
 		<section class="bg-slate-800 grid grid-cols-3 justify-center">
 			<div class="bg-red-500 col-span-2"></div>
-			<div class="text-zinc-200 my-16 mx-auto w-96">
-				<h1 class="text-3xl font-bold">Random text.</h1>
+			<div class="text-zinc-200 my-24 mx-auto w-96">
+				<h1 class="text-3xl font-bold border-l-4 border-red-500 pl-2">Random text.</h1>
 				<p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ipsa earum blanditiis voluptas quos distinctio debitis ullam atque sit nobis. Ipsa, eius ut labore nihil cumque eaque qui nemo accusantium.</p><br>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque veritatis aut deserunt. Quam ratione consequuntur autem? Quis doloribus at eius aut deleniti inventore iure laboriosam.</p><br>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, quo consectetur molestiae voluptatibus numquam alias. Facilis eveniet quibusdam, accusamus totam numquam sint rem placeat rerum quos excepturi nesciunt, quae hic maiores velit!</p>
@@ -32,11 +37,11 @@ const fillerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
 		</section>
 
 		<section class="bg-gray-200">
-			<div class="text-center py-24 ">
-				<h3 class="text-2xl text-slate-700 font-bold">Take your Pick</h3>
+			<div class="text-center pt-24 pb-12">
+				<h3 class="text-2xl text-slate-700 font-bold ">Take your Pick</h3>
 				<p class="text-neutral-500 mt-3">Lorem ipsum dolor sit amet consectetur.</p>
 			</div>
-			<div class="grid grid-cols-3 gap-12 justify-evenly mx-auto pb-64 w-1280">
+			<div class="grid grid-cols-3 gap-14 justify-between mx-auto pb-64 w-1280">
 
 				<Card 
 					href={image1}
@@ -57,10 +62,31 @@ const fillerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
 			</div>
 		</section>
 
-		<section>
-
+		<section class="bg-white">
+			<div class="grid grid-cols-3 w-1280 mx-auto py-32">
+				<h2 class="text-3xl font-bold col-span-3 text-slate-800 mb-5 border-l-4 border-red-500 pl-2">About Us</h2>
+				<div class="col-span-2 py-5 pr-10 text-slate-700 bg-zinc-200 p-5 rounded-sm shadow-sm">
+					<p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eos dolorem iste reprehenderit reiciendis veniam explicabo. Nemo laudantium corrupti pariatur eaque incidunt temporibus libero ratione consequuntur aliquam magnam repellat, enim soluta voluptas ipsam blanditiis debitis aperiam ducimus!</p><br>
+					<p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolor ex laboriosam. Temporibus quia sint quam illum dignissimos itaque ab, aliquid placeat nostrum repellat dicta optio eius atque illo doloremque accusamus officia eveniet perferendis praesentium, amet dolorem? Doloremque, sint veniam natus nesciunt iure ipsa aliquid vel in nihil voluptatem?</p><br>
+					<p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, asperiores libero fugiat quisquam eligendi praesentium maxime, voluptatibus non obcaecati neque corrupti repellendus tempora ducimus possimus. Ullam, mollitia ut est facilis doloremque consequatur.</p><br>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sed porro blanditiis hic. Obcaecati blanditiis modi aliquid iste laborum qui temporibus eum nam! Assumenda, hic illo quae recusandae dolores ipsam autem voluptatibus, labore aspernatur consequatur, veniam voluptates blanditiis ad quis eaque provident itaque commodi excepturi explicabo. Doloremque laudantium voluptates porro. Veritatis, officiis eos necessitatibus cum repellendus excepturi impedit!</p>
+				</div>
+				<div class="flex justify-center">
+					<!-- <img src={image4} class="object-cover my-20" alt=""> -->
+					<Image class=" shadow-md rounded-sm" fit='cover' width={352} height={529} aspectRatio="2:3" format='jpg' src={image4} alt=""/>
+				</div>
+			</div>
 		</section>
+		
+
+
+		<section>
+			
+		</section>
+
+
 	</div>
+
 </Layout>
 
 	

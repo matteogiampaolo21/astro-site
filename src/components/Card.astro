@@ -5,13 +5,17 @@ export interface Props {
 	body: string;
 	href: string;
 }
+import { Image } from '@astrojs/image/components';
 
 const { href, title, body } = Astro.props;
 ---
 
 
-<div class="flex flex-col bg-slate-100 p-5 shadow-sm">
-	<img src={href} loading="lazy" alt="">
-	<h2 class="text-center  text-xl mt-4">{title}</h2>
-	<p class="mt-1">{body}</p>
+<div class="flex flex-col-reverse bg-slate-100 p-5	 shadow-sm">
+	<div class=" mx-auto">
+		<h2 class="text-center text-xl mt-4">{title}</h2>
+		<p class="mt-1">{body}</p>
+	</div>
+	<Image width={350} height={233} aspectRatio="4:3" format='jpg' src={href} alt="">
+	
 </div>
