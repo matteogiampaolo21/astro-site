@@ -35,6 +35,9 @@ const { title } = Astro.props;
 		font-family: "Roboto Mono" , monospace;
 		background-color: #e5e7eb;
 	}
+	.my-transition{
+		transition: 0.3s
+	}
 	.brand{
 		font-family: "Roboto Mono", monospace;
 		font-weight: 400;
@@ -43,12 +46,43 @@ const { title } = Astro.props;
 		font-size: 2.25rem/* 36px */;
     	line-height: 2.5rem/* 40px */;
 	}
+	.smooth-btn{
+		transition: transform 750ms;
+	}
+	.smooth-btn:hover,.button:focus-visible{
+		transform: translateY(-0.2rem);
+		background-color: #dc2626;
+		transition: transform 250ms;
+	}
+	::-webkit-scrollbar {
+		width: 10px;
+		
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: #d1d5db;
+	}
 	
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #9ca3af; 
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #6b7280; 
+	}
+
+	textarea:focus, input:focus{
+    	outline: none;
+		border-color: #9ca3af;
+	}
 
 </style>
 <script>
-	window.onbeforeunload = function () {
-		window.scrollTo(0, 0);
-	}
+	// window.onbeforeunload = function () {
+	// 	window.scrollTo(0, 0);
+	// }
 	
 </script>
