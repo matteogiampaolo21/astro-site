@@ -28,6 +28,8 @@ export const Navbar = () => {
                         <a href="#" className="bg-zinc-50 shadow-md px-3 py-2 rounded-sm text-center"> <span className="font-bold text-xl ml-2">Page</span></a>
                         <a href="/about" className="bg-zinc-50 shadow-md px-3 py-2 rounded-sm text-center"> <span className="font-bold text-xl ml-2">About</span></a>
                         <a href="#" className="bg-zinc-50 shadow-md px-3 py-2 rounded-sm text-center"> <span className="font-bold text-xl ml-2">Contact</span></a>
+
+                        
                     </div>
                     <button className=" px-3 py-2 rounded-md  mt-5" onClick={handleClose}><i className="fa-solid fa-xmark fa-lg"></i></button>
                 </div>
