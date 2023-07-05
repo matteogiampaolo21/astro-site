@@ -1,14 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-const image1 = '/images/adam-kool-ndN00KmbJ1c-unsplash.jpg';
-const image2 = '/images/luca-bravo-VowIFDxogG4-unsplash.jpg';
-const image3 = '/images/neom-gOqBe7ropxM-unsplash.jpg';
-const image4 = '/images/nathan-dumlao-zUNs99PGDg0-unsplash.jpg'
+
+
+import image1 from '../assets/adam-kool-ndN00KmbJ1c-unsplash.jpg';
+import image2 from '../assets/luca-bravo-VowIFDxogG4-unsplash.jpg';
+import image3 from '../assets/neom-gOqBe7ropxM-unsplash.jpg';
+import image4 from '../assets/nathan-dumlao-zUNs99PGDg0-unsplash.jpg';
+
 
 const fillerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut libero aliquam officiis at harum ab.";
 
-import { Image } from '@astrojs/image/components';
+import { Image } from 'astro:assets';
 
 
 ---
@@ -74,7 +77,8 @@ import { Image } from '@astrojs/image/components';
 					<a href="/about"><button class="bg-red-500 text-white py-2 rounded-sm mt-5 w-56 smooth-btn">Click here for more!</button></a>
 				</div>
 				<div class="flex justify-center">
-					<img src={image4} class="object-cover h-80 mx-8 rounded-sm w-full shadow-md"  alt="">
+					<Image src={image4} quality={"low"} format="jpeg" class="object-cover h-80 mx-8 rounded-sm w-full shadow-md" alt=''/>
+					<!-- <img src={image4} class="object-cover h-80 mx-8 rounded-sm w-full shadow-md"  alt=""> -->
 					<!-- <Image class=" shadow-md rounded-sm" fit='cover' width={352} height={529} aspectRatio="2:3" format='jpg' src={image4} alt=""/> -->
 				</div>
 			</div>

@@ -1,0 +1,38 @@
+<footer class="bg-slate-900">
+    <div class="grid grid-cols-3 w-1280 mx-auto py-28">
+        
+        <div class=" text-gray-300 px-10 pb-3 flex flex-col gap-y-5">
+            <h1 class="text-2xl font-bold text-gray-200">Random Text</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing ab, odio consequatur voluptatem fugit dolore, facilis quia beatae praesentium!</p>
+            <p><span class="text-red-500 font-bold">Phone</span>: 000 000 0000</p>
+            <p><span class="text-red-500 font-bold" >Email</span>: example@gmail.com</p>
+            <p><span class="text-red-500 font-bold" >Website</span><a href="https://www.google.com">: www.google.com</a></p>
+        </div>
+
+        <div>
+            <h1 class="text-gray-200 text-2xl font-bold mb-5">Come find us!</h1>
+            <div id="map" style="height: 304px;" ></div>
+        </div>
+        
+        
+        <div class="pl-10">
+            <h1 class="text-gray-200 text-2xl font-bold mb-5">See more:</h1>
+            <ul class="flex flex-col text-lg gap-2 [&>*]:border-b-2 [&>*]:border-slate-800 [&>*]:pb-2 text-gray-300">
+                <li><a class="hover:text-red-500 " href="/">Home</a></li>
+                <li><a class="hover:text-red-500 " href="/" >Page</a></li>
+                <li><a class="hover:text-red-500 " href="/about" >About</a></li>
+                <li><a class="hover:text-red-500 " href="/contact" >Contact</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    <script>
+        var map = L.map('map').setView([46.595, 7.907], 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        var marker = L.marker([46.595, 7.907]).addTo(map);
+
+    </script>
+</footer>
