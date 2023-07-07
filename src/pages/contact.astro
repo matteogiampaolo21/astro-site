@@ -4,7 +4,64 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title='Contact'>
     <section class="bg-slate-700 text-center py-44 text-zinc-300">
-        <h1 class="text-white text-2xl font-bold mb-2">Contact Us</h1>
+        <h1 class="text-white text-3xl font-bold mb-2">Contact Us</h1>
         <p>We are here for you.</p>
     </section>
+    <section>
+        <div class="w-1280 mx-auto  my-24">
+            <div class="grid grid-cols-5 mb-24">
+                <div class="col-span-2 flex flex-col gap-6 text-zinc-700 mr-10">
+                    <h1 class="text-3xl text-slate-900">Our Contacts</h1>
+                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quas fuga minima, sint sapiente animi nihil cum officiis voluptatum voluptates nemo, beatae esse accusantium reiciendis illo. Soluta!</p>
+
+                    <div class="5">
+                        <h2 class="text-2xl text-slate-900">Address</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+
+                    <div class="">
+                        <h2 class="text-2xl  text-slate-900">Phone</h2>
+                        <p>+00 000 000 0000</p>
+                        <p>+00 000 000 0000</p>
+                        <p>+00 000 000 0000</p>
+                    </div>
+
+                    <div class="">
+                        <h2 class="text-2xl text-slate-900">Email</h2>
+                        <p>fake@email.com</p>
+                    </div>
+
+                </div>
+                <div class="col-span-3">
+
+
+                    <h2 class="w-760 mx-auto text-slate-900 text-3xl border-b-4 border-red-500 pb-2 pl-2 mb-5">Contact Form</h2>
+				    <form class="grid grid-cols-2 gap-5 mx-auto w-760 content-center" action="">
+                        <input class="px-5 py-2 bg-zinc-100 text-gray-300 border border-gray-400 rounded-sm" type="text" name="" id="" placeholder="Name">
+                        <input class="px-5 py-2 bg-zinc-100 text-gray-300 border border-gray-400 rounded-sm" type="text" name="" id="" placeholder="Phone">
+                        <input class="px-5 py-2 bg-zinc-100 text-gray-300 border border-gray-400 rounded-sm" type="email" name="" id="" placeholder="Email">
+                        <input class="px-5 py-2 bg-zinc-100 text-gray-300 border border-gray-400 rounded-sm" type="text" name="" id="" placeholder="Subject">
+                        <textarea class="col-span-2 px-5 py-2 bg-zinc-100 text-gray-300 border border-gray-400 rounded-sm" name="" id="" cols="30" rows="10" placeholder="Description"></textarea>
+
+                        <button class="bg-red-500 text-white py-2 rounded-sm mt-5 w-32 hover:bg-red-600 my-transition shadow-sm">Submit</button>
+				    </form>
+
+
+                </div>
+            </div>
+            
+            <div>
+                <h1 class="text-slate-900 text-2xl mb-5">Come find us!</h1>
+                <div id="map" style="height: 404px;" ></div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var map = L.map('map').setView([46.595, 7.907], 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        var marker = L.marker([46.595, 7.907]).addTo(map);
+    </script>
 </Layout>
