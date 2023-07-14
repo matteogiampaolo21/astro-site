@@ -52,16 +52,11 @@ import Layout from '../layouts/Layout.astro';
             
             <div>
                 <h1 class="text-slate-900 text-2xl mb-5">Come find us!</h1>
-                <div id="map" style="height: 404px;" ></div>
+                <div id="mapContact" style="height: 404px;" ></div>
             </div>
         </div>
     </section>
     <script>
-        var map = L.map('map').setView([46.595, 7.907], 13);
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-        var marker = L.marker([46.595, 7.907]).addTo(map);
+        
     </script>
 </Layout>

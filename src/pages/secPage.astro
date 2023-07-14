@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import heroImage from "../assets/freddie-marriage-xmUdzDu15pM-unsplash.jpg"
+import secondImage from "../assets/arnold-francisca-f77Bh3inUpE-unsplash.jpg"
+
+import { Image } from 'astro:assets';
+---
+
+<Layout title="Page">
+    <section class="">
+        
+        <div class="relative text-white">
+			<Image quality={"low"} src={heroImage} class="brightness-50 w-full shadow-md rounded-sm h-760 object-cover" alt="italian building"/>
+            <div class="absolute top-1/2 left-1/2" style="transform: translate(-50%, -50%);">
+                <h1 class="text-3xl font-bold">Hello there!</h1>
+                <p class="text-neutral-300 mt-3 w-760 mx-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas atque alias quia vitae odit, non harum expedita cumque accusantium voluptate esse reiciendis ducimus voluptatem vero, delectus enim? Sequi, nobis eum.</p>
+                <button class="bg-red-500 py-2 w-28 rounded-sm my-5 hover:bg-red-600 my-transition text-md relative my-btn btn-under-anim ">Click Me!</button>
+            </div>
+        </div>
+    </section>
+    <section class="bg-zinc-200 text-center text-neutral-600 py-32">
+        <h1 class="text-2xl font-bold text-neutral-800 mb-5">Lorem ipsum dolor sit amet.</h1>
+        <p class="w-1280 mx-auto text-sm italic ">Dolor sit amet consectetur adipisicing elit. Quidem, vero repudiandae neque illum eum totam inventore ea dolorum. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <button class="mt-5 border border-black py-2 px-3 tex-black relative rounded-sm my-btn btn-slide-anim">Click Now</button>
+        
+        <div class="border-b border-neutral-300 w-1280 mx-auto mt-16"></div>
+
+        <div class="grid grid-cols-3 gap-16 w-1280 mx-auto my-20">
+            <div>
+                <i class="fa-solid fa-paintbrush text-5xl mb-5 text-red-500 hover:text-red-600"></i>
+                <h2 class="text-neutral-800 text-lg">Modern Designs</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet culpa quam rerum at dicta sed, atque totam beatae, ea enim eum aliquid soluta. Quas sit explicabo eos. Lorem, ipsum dolor.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-bullseye text-5xl mb-5 text-red-500 hover:text-red-600"></i>
+                <h2 class="text-neutral-800 text-lg">Distinctive Designs</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque totam beatae, ea enim eum aliquid soluta. Id, minus amet rerum deleniti excepturi deserunt similique. Quas sit explicabo eos.</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-lightbulb text-5xl mb-5 text-red-500 hover:text-red-600"></i>
+                <h2 class="text-neutral-800 text-lg">Creative Designs</h2>
+                <p>Lorem ipsum dolor. Eveniet culpa quam rerum at dicta sed, atque totam beatae, ea enim eum aliquid soluta. Id, minus amet rerum deleniti excepturi deserunt similique. Quas sit explicabo eos.</p>
+            </div>
+        </div>
+
+
+    </section>
+    
+    <section>
+        <div class="relative text-white">
+			<Image quality={"low"} src={secondImage} class="my-brightness w-full shadow-md rounded-sm h-760 object-cover" alt="italian building"/>
+            <div class="absolute top-1/2 left-1/2" style="transform: translate(-50%, -50%);">
+                <h1 class="text-3xl font-bold">Hello there!</h1>
+                <p class="text-neutral-200 mt-3 w-760 mx-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas atque alias quia vitae odit, non harum expedita cumque accusantium voluptate esse reiciendis ducimus voluptatem vero, delectus enim? Sequi, nobis eum.</p>
+                <button class="bg-red-500 py-2 w-28 rounded-sm my-5 hover:bg-red-600 my-transition text-md relative my-btn btn-under-anim ">Click Me!</button>
+            </div>
+        </div>
+    </section>
+
+</Layout>
+
+
+
+
+
+
+
+
+
+

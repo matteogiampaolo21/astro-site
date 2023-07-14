@@ -77,9 +77,7 @@ import { Image } from 'astro:assets';
 					<a href="/about"><button class="bg-red-500 text-white py-2 rounded-sm mt-5 w-56 smooth-btn">Click here for more!</button></a>
 				</div>
 				<div class="flex justify-center">
-					<Image src={image4} quality={"low"} format="jpeg" class="object-cover h-80 mx-8 rounded-sm w-full shadow-md" alt=''/>
-					<!-- <img src={image4} class="object-cover h-80 mx-8 rounded-sm w-full shadow-md"  alt=""> -->
-					<!-- <Image class=" shadow-md rounded-sm" fit='cover' width={352} height={529} aspectRatio="2:3" format='jpg' src={image4} alt=""/> -->
+					<Image loading='lazy' src={image4} quality={"low"} format="jpeg" class="object-cover h-80 mx-8 rounded-sm w-full shadow-md" alt=''/>
 				</div>
 			</div>
 		</section>

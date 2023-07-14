@@ -1,4 +1,12 @@
-<footer class="bg-slate-900">
+---
+export interface Props {
+	pageTitle: string;
+    message: string;
+}
+
+const { pageTitle } = Astro.props;
+---
+<footer id="footer-my" data-title={pageTitle} class="bg-slate-900">
     <div class="grid grid-cols-3 w-1280 mx-auto py-28">
         
         <div class=" text-gray-300 px-10 pb-3 flex flex-col gap-y-5">
@@ -11,7 +19,7 @@
 
         <div>
             <h1 class="text-gray-200 text-2xl font-bold mb-5">Come find us!</h1>
-            <div id="map" style="height: 304px;" ></div>
+            <div id="mapFooter" style="height: 304px;" ></div>
         </div>
         
         
@@ -27,7 +35,18 @@
         
     </div>
     <script>
-        var map = L.map('map').setView([46.595, 7.907], 13);
+        const titlePage = document.querySelector("#footer-my");
+        
+        if (titlePage.dataset.title === "Contact"){
+            var map = L.map('mapContact').setView([46.595, 7.907], 13);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+            var marker = L.marker([46.595, 7.907]).addTo(map);
+        }
+
+        var map = L.map('mapFooter').setView([46.595, 7.907], 13);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'

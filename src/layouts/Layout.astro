@@ -19,6 +19,14 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 
+		
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 		<link 
 			rel="stylesheet" 
 			href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -30,18 +38,13 @@ const { title } = Astro.props;
      		integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      		crossorigin="">
 		</script>
-		
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-		
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 		<title>{title}</title>
 	</head>
 	<body>
 		<Navbar client:load />
 		<slot />
-		<Footer />
+		<Footer pageTitle={title}/>
 		
 	</body>
 </html>
@@ -93,11 +96,80 @@ const { title } = Astro.props;
     	outline: none;
 		border-color: #9ca3af;
 	}
+	
+
+	/* Button Animation */
+	.my-btn.btn-under-anim::before{
+		content: "";
+		position: absolute;
+		top: 45px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 2px;
+		background-color: #ef4444;
+		transition: transform 300ms ease-in-out;
+		transform: scaleX(0)
+	}
+	.my-btn.btn-under-anim:hover::before,
+	.my-btn.btn-under-anim:focus::before{
+		transform: scaleX(1);
+	}
+
+
+
+
+
+	.my-btn.btn-slide-anim::before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+		background-color: #ef4444;
+
+		transition: transform 300ms ease-in-out;
+		transform: scaleX(0);
+		transform-origin: left;
+	}
+	.my-btn.btn-slide-anim:hover::before,
+	.my-btn.btn-slide-anim:focus::before{
+		transform: scaleX(1);
+	}
+
+	.my-btn.btn-slide-anim{
+		transition: color 300ms ease-in-out;
+		z-index: 1;
+	}
+
+
+	.my-btn.btn-slide-anim:hover,
+	.my-btn.btn-slide-anim:focus {
+		color: white;
+	}
+
+	/* Navbar */
+	.my-active{
+    
+    	width: 100%;
+    	position: fixed;
+    	top: 0px;
+    	transition: 0.3s linear;
+    	display: block;
+
+
+    	z-index: 40;
+    	/* padding: 0 7%; */
+	}
+	.my-hidden{
+    	top: -100px;
+    	transition: 0.3s linear;
+	}
+	.my-brightness{
+		filter: brightness(0.3);
+	}	
+
 
 </style>
-<script>
-	// window.onbeforeunload = function () {
-	// 	window.scrollTo(0, 0);
-	// }
-	
-</script>
