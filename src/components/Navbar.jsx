@@ -30,15 +30,21 @@ export const Navbar = () => {
     }, [lastScrollY]);
     
     return(
-        <nav className={`my-active ${show && 'my-hidden'}`}>
+        <div className={`my-active `}>
             
-            <div className='flex flex-row  items-center '>
-                <div className="bg-slate-700 mt-2 ml-2  border-neutral-300 border-2 rounded-sm">
-                    <button className="py-1 px-2"><i className="fa-solid fa-bars-staggered text-neutral-200"></i></button>
-                </div>
-            </div>
+            <label className="hamburger-menu">
+              <input type="checkbox" />
+            </label>
+            <aside className="sidebar">
+              <nav className="flex flex-col gap-5 text-xl pb-3">
+                <div><a href="/" className="w-full block">Home</a></div>
+                <div><a href="/secPage" className="w-full block">Second Page</a></div>
+                <div><a href="/about" className="w-full block">About</a></div>
+                <div><a href="/contact" className="w-full block">Contact</a></div>
+              </nav>
+            </aside>
                 
-        </nav>
+        </div>
         
     )
 }
