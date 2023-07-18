@@ -4,6 +4,7 @@ export interface Props {
 	title: string;
 	body: string;
 	href: ImageMetadata;
+	
 }
 import { Image } from 'astro:assets';
 
@@ -16,6 +17,6 @@ const { href, title, body } = Astro.props;
 		<h2 class="text-center text-xl mt-4">{title}</h2>
 		<p class="mt-1">{body}</p>
 	</div>
-	<Image loading="lazy" src={href} aspectRatio={"3:2"} format="jpeg" quality={"low"} alt="nature">
-	
+	<Image loading="lazy" src={href} aspectRatio={"3:2"} quality={"low"} alt="nature">
+		
 </div>

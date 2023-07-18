@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import heroImage from "../assets/freddie-marriage-xmUdzDu15pM-unsplash.jpg"
-import secondImage from "../assets/arnold-francisca-f77Bh3inUpE-unsplash.jpg"
+import heroImage from "../assets/secPageImage1.jpg"
+import secondImage from "../assets/secPageImage2.jpg"
 
 import { Image } from 'astro:assets';
 ---
@@ -10,7 +10,7 @@ import { Image } from 'astro:assets';
     <section class="">
         
         <div class="relative text-white">
-			<Image quality={"low"} src={heroImage} class="brightness-50 w-full shadow-md rounded-sm h-760 object-cover" alt="italian building"/>
+			<Image quality={"low"} src={heroImage} loading="lazy" class="brightness-50 w-full shadow-md rounded-sm h-760 object-cover" alt="italian building"/>
             <div class="absolute top-1/2 left-1/2" style="transform: translate(-50%, -50%);">
                 <h1 class="text-3xl font-bold">Hello there!</h1>
                 <p class="text-neutral-300 mt-3 w-760 mx-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas atque alias quia vitae odit, non harum expedita cumque accusantium voluptate esse reiciendis ducimus voluptatem vero, delectus enim? Sequi, nobis eum.</p>
@@ -48,7 +48,7 @@ import { Image } from 'astro:assets';
     
     <section>
         <div class="relative text-white text-center">
-			<Image quality={"low"} src={secondImage} class="my-brightness w-full shadow-md rounded-sm h-760 object-cover" alt="italian building"/>
+			<Image quality={"low"} loading="lazy" src={secondImage} class="my-brightness w-full shadow-md rounded-sm h-760 object-cover" alt="italian building"/>
             <div class="absolute top-1/2 left-1/2" style="transform: translate(-50%, -50%);">
                 <h1 class="text-3xl font-bold">Hello there!</h1>
                 <p class="text-neutral-200 mt-3 w-760 mx-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas atque alias quia vitae odit, non harum expedita cumque accusantium voluptate esse reiciendis ducimus voluptatem vero, delectus enim? Sequi, nobis eum.</p>

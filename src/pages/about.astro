@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import aboutImage1 from '../assets/braden-collum-7zUCERGaEkE-unsplash.jpg'
-import aboutImage2 from '../assets/giuseppe-mondi-Qq1fwSLM0N0-unsplash.jpg'
+import aboutImage1 from '../assets/aboutImage1.jpg'
+import aboutImage2 from '../assets/aboutImage2.jpg'
 import { Image } from 'astro:assets';
 
 ---
@@ -17,7 +17,7 @@ import { Image } from 'astro:assets';
 		<div class="w-760 mx-auto  my-24 ">
 			<h2 class="text-2xl border-l-4 border-red-500 mb-5 pl-2 font-bold text-slate-700">About Us</h2>
 			<div class="grid grid-cols-3">
-				<Image quality={"low"} src={aboutImage1} class="shadow-md rounded-sm" alt='alley way'/>
+				<Image quality={"low"} loading="lazy" src={aboutImage1} class="shadow-md rounded-sm" alt='alley way'/>
 				<div class="ml-5 col-span-2">
 					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum explicabo error temporibus impedit doloribus quod, corrupti maxime, nulla, modi reiciendis adipisci fugit quisquam. Molestiae, cum numquam iste architecto aliquid repudiandae, reprehenderit doloremque debitis porro ipsam sint accusamus temporibus pariatur ut!</p>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, porro. Quo harum repellat earum maxime voluptatem ipsam laborum nam minus consequuntur, doloribus quam repudiandae iste qui possimus aliquam! Quibusdam debitis labore eius praesentium distinctio provident ex iusto! Nihil inventore laboriosam assumenda qui blanditiis quam maxime reiciendis voluptas in, repudiandae facilis distinctio minus.</p>
@@ -28,7 +28,7 @@ import { Image } from 'astro:assets';
 				<p class="bg-zinc-300 p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quidem a unde possimus nemo cupiditate sit sint debitis saepe ullam, perspiciatis quisquam! Exercitationem consequatur ipsa quod maxime beatae laborum excepturi fugit consequuntur repellat eveniet dicta animi, incidunt dolore nihil, aperiam aspernatur ipsum eum nisi ex veniam, magnam sit nulla. Dolor dignissimos minus alias distinctio, harum impedit cum quasi dicta vel veritatis sunt blanditiis voluptas nihil possimus, labore recusandae mollitia ex iusto temporibus. Et amet atque repellat dolorum voluptate.</p>
 				<div class="border-r-4 border-slate-600 ml-2"></div>
 			</div>	
-			<Image quality={"low"} src={aboutImage2} class="shadow-md rounded-sm h-80 my-9 object-cover" alt="italian building"/>
+			<Image quality={"low"} loading='lazy' src={aboutImage2} class="shadow-md rounded-sm h-80 my-9 object-cover" alt="italian building"/>
 			<h2 class="text-xl font-bold text-slate-700 border-l-4 border-slate-600 pl-2 mb-5">This is some heading.</h2>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi a architecto distinctio saepe, incidunt accusamus deleniti reprehenderit beatae iure non consequatur quo. Praesentium, doloremque necessitatibus aliquid nesciunt deleniti ipsam dolores repudiandae a dolor dicta officia odit minus vel molestias sit. Amet quibusdam architecto recusandae, dignissimos optio voluptate accusamus qui voluptatem fugiat consequatur iure molestiae nostrum aut ratione repudiandae dolorum ipsa, maxime officiis veniam voluptatibus. Quis aliquam, eligendi blanditiis impedit quaerat fugit! Ipsum, maxime saepe mollitia inventore rem dolores odio eius nihil vitae velit esse et ut autem nulla corrupti beatae reiciendis iure magnam adipisci qui odit dicta quod repellat! Beatae, exercitationem enim officiis odit voluptatibus, illum maxime eius cumque deleniti ducimus, tempore tenetur.</p><br>
 
