@@ -3,10 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 
 
-import image1 from '../assets/homeImage1.jpg';
-import image2 from '../assets/homeImage2.jpg';
-import image3 from '../assets/homeImage3.jpg';
-import image4 from '../assets/homeImage4.jpg';
+import image1 from '../images/homeImage1.jpg';
+import image2 from '../images/homeImage2.jpg';
+import image3 from '../images/homeImage3.jpg';
+import image4 from '../images/homeImage4.jpg';
 
 
 const fillerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut libero aliquam officiis at harum ab.";
@@ -47,21 +47,30 @@ import { Image } from 'astro:assets';
 			</div>
 			<div class="grid grid-cols-3 gap-14 justify-between mx-auto pb-32 w-1280">
 
-				<Card 
-					href={image1}
-					title='Card 1'
-					body={fillerText}
-				/>
-				<Card
-					href={image2}
-					title='Card 2'
-					body={fillerText}
-				/>
-				<Card 
-					href={image3}
-					title='Card 3'
-					body={fillerText}
-				/>
+				<div class="flex flex-col-reverse bg-slate-100 p-5	 shadow-sm">
+					<div class=" mx-auto">
+						<h2 class="text-center text-xl mt-4">Card 1</h2>
+						<p class="mt-1">{fillerText}</p>
+					</div>
+					<div class="blur-load-1 blurred-img"><Image loading="lazy" class="object-cover rounded-sm w-full shadow-md" src={image1} aspectRatio={"3:2"} quality={"low"} alt="nature"/></div>
+
+				</div>
+				<div class="flex flex-col-reverse bg-slate-100 p-5	 shadow-sm">
+					<div class=" mx-auto">
+						<h2 class="text-center text-xl mt-4">Card 2</h2>
+						<p class="mt-1">{fillerText}</p>
+					</div>
+					<div class="blur-load-2 blurred-img"><Image loading="lazy" class="object-cover rounded-sm w-full shadow-md" src={image2} aspectRatio={"3:2"} quality={"low"} alt="nature"/></div>
+
+				</div>
+				<div class="flex flex-col-reverse bg-slate-100 p-5	 shadow-sm">
+					<div class=" mx-auto">
+						<h2 class="text-center text-xl mt-4">Card 3</h2>
+						<p class="mt-1">{fillerText}</p>
+					</div>
+					<div class="blur-load-3 blurred-img"><Image loading="lazy" class="object-cover rounded-sm w-full shadow-md" src={image3} aspectRatio={"3:2"} quality={"low"} alt="nature"/></div>
+
+				</div>
 
 			</div>
 		</section>
@@ -69,15 +78,17 @@ import { Image } from 'astro:assets';
 		
 
 		<section class="bg-white">
-			<div class="grid grid-cols-3 w-1280 mx-auto py-48 ">
+			<div class="grid grid-cols-3 gap-6 w-1280 mx-auto py-48 ">
 				<h2 class="text-3xl font-bold col-span-3 text-slate-800 mb-5 border-l-4 border-red-500 pl-2">About Us</h2>
 				<div class="col-span-2 py-5 pr-10 text-slate-700 bg-zinc-200 p-5 rounded-sm shadow-sm">
 					<p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eos dolorem iste reprehenderit reiciendis veniam explicabo. Nemo laudantium corrupti pariatur eaque incidunt temporibus libero ratione consequuntur aliquam magnam repellat, enim soluta voluptas ipsam blanditiis debitis aperiam ducimus!</p><br>
 					<p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolor ex laboriosam. Temporibus quia sint quam illum dignissimos itaque ab, aliquid placeat nostrum repellat dicta optio eius atque illo doloremque accusamus officia eveniet perferendis praesentium, amet dolorem? Doloremque, sint veniam.</p>
 					<a href="/about"><button class="bg-red-500 text-white py-2 rounded-sm mt-5 w-56 smooth-btn">Click here for more!</button></a>
 				</div>
-				<div class="flex justify-center">
-					<Image loading='lazy' src={image4} quality={"low"} format="jpeg" class="object-cover h-80 mx-8 rounded-sm w-full shadow-md" alt=''/>
+				<div class="flex justify-center blur-load-4 blurred-img">
+					<!-- <div class="mx-8"> -->
+						<Image loading='lazy' src={image4} quality={"low"} format="jpeg" class=" object-cover h-80   rounded-sm w-full shadow-md" alt=''/>
+					<!-- </div> -->
 				</div>
 			</div>
 		</section>
@@ -108,5 +119,26 @@ import { Image } from 'astro:assets';
 	</div>
 
 </Layout>
+<style>
+	.blur-load-1{
+		background-image: url(../images/homeImage1-small.jpg);
+		height: 224px;
+	}
+	.blur-load-2{
+		background-image: url(../images/homeImage2-small.jpg);
+		height: 224px;
+	}
+	.blur-load-3{
+		background-image: url(../images/homeImage3-small.jpg);
+		height: 224px;
+	}
+	.blur-load-4{
+		background-image: url(../images/homeImage4-small.jpg);
+		height: 20rem;
+	}
+</style>
+<script>
+
+</script>
 
 	
