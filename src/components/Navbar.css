@@ -1,0 +1,42 @@
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input{
+	content: "";
+	width: 23px;
+	height: 3px;
+	border-radius: 2pxpx;
+	background-color: white;
+}
+.hamburger-menu{
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	margin: 15px 10px;
+	background-color: #b91c1c;
+	border: #7f1d1d 4px solid;
+	cursor: pointer;
+	border-radius: 2px;
+	padding: 9px 6px;
+	width: max-content;
+}
+.hamburger-menu input{
+	appearance: none;
+	outline: none;
+	z-index: 2;	
+}
+.sidebar{
+	transition: translate 300ms;
+	translate: -100%;
+	padding: 0.5rem 1rem;
+	padding-top: calc(15px + 5px );
+	background-color: #b91c1c;
+	color:white;
+	max-width: 15rem;
+	border: #7f1d1d 4px solid;
+	border-radius: 2px;
+	height: max-content;
+}
+.hamburger-menu:has(input:checked) + .sidebar{
+	translate: 0;
+	margin-left: 10px;	
+}

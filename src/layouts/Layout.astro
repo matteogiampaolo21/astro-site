@@ -53,7 +53,7 @@ const { title } = Astro.props;
 
 <style is:global>
 
-	
+		
 
 	body{
 		font-family: "Roboto Mono" , monospace;
@@ -63,41 +63,20 @@ const { title } = Astro.props;
 	.my-transition{
 		transition: 0.3s
 	}
-	.brand{
-		font-family: "Roboto Mono", monospace;
-		font-weight: 400;
-		letter-spacing: 0.1rem;
-		color:#374151;
-		font-size: 2.25rem/* 36px */;
-    	line-height: 2.5rem/* 40px */;
-	}
-	.smooth-btn{
-		transition: transform 750ms;
-	}
-	.smooth-btn:hover,.button:focus-visible{
-		transform: translateY(-0.2rem);
-		background-color: #dc2626;
-		transition: transform 250ms;
-	}
-	::-webkit-scrollbar {
-		width: 10px;
-		
-	}
-
-	/* Track */
-	::-webkit-scrollbar-track {
-		background: #d1d5db;
-	}
 	
-	/* Handle */
+	::-webkit-scrollbar {
+		width: 5px;
+	}
+	::-webkit-scrollbar-track {
+		background: #0f172a;
+	}
 	::-webkit-scrollbar-thumb {
-		background: #9ca3af; 
+		background: #ef4444; 
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background:#b91c1c; 
 	}
 
-	/* Handle on hover */
-	::-webkit-scrollbar-thumb:hover {
-		background: #6b7280; 
-	}
 
 	textarea:focus, input:focus{
     	outline: none;
@@ -151,63 +130,7 @@ const { title } = Astro.props;
 	.my-btn.btn-slide-anim:focus {
 		color: white;
 	}
-	/* Navbar */
-	.hamburger-menu::before,
-	.hamburger-menu::after,
-	.hamburger-menu input{
-		content: "";
-		width: 23px;
-		height: 3px;
-		border-radius: 2pxpx;
-		background-color: white;
-	}
-	.hamburger-menu{
-		display: flex;
-		flex-direction: column;
-		gap: 5px;
-		margin: 15px 10px;
-		background-color: #b91c1c;
-		border: #7f1d1d 4px solid;
-		cursor: pointer;
-		border-radius: 2px;
-		padding: 9px 6px;
-		width: max-content;
-	}
-	.hamburger-menu input{
-		appearance: none;
-		outline: none;
-		z-index: 2;
-		
-	}
-	.sidebar{
-		transition: translate 300ms;
-		translate: -100%;
-		padding: 0.5rem 1rem;
-		padding-top: calc(15px + 5px );
-		background-color: #b91c1c;
-		color:white;
-		max-width: 15rem;
-		border: #7f1d1d 4px solid;
-		border-radius: 2px;
-		height: max-content;
-	}
-	.hamburger-menu:has(input:checked) + .sidebar{
-		translate: 0;
-		margin-left: 10px;
-		
-	}	
-	.my-active{ 	
-    	position: fixed;
-    	top: 0;
-    	display: block;
-    	z-index: 40;
-	}
-	.my-brightness{
-		filter: brightness(0.3);
-	}	
 
-
-	/* Clean CSS */
 	.blurred-img{
 		background-size:cover;
 		background-repeat: no-repeat;

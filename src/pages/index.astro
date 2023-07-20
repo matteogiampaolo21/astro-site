@@ -13,7 +13,6 @@ const fillerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
 
 import { Image } from 'astro:assets';
 
-
 ---
 
 <Layout title="Home">
@@ -23,7 +22,7 @@ import { Image } from 'astro:assets';
 			<div class="typer-container flex flex-col justify-center my-10 ml-32 mr-20">
 				<h1 class="typed text-5xl py-5 text-slate-700 font-bold ">We fight for you.</h1>
 				<p class="text-neutral-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum fuga sunt, deleniti ducimus atque explicabo minima. Dicta aut recusandae veniam beatae voluptate reiciendis aspernatur eos unde molestiae nobis, minima ullam.</p>
-				<button class="bg-red-500 text-white w-32 py-2 rounded-sm mt-5 smooth-btn ">Contact Us</button>
+                <button class="bg-red-500 py-2 w-28 text-white font-bold  rounded-sm my-5 hover:bg-red-600 my-transition text-md relative my-btn btn-under-anim ">Click Me!</button>
 			</div>
 			<div>
 				
@@ -83,7 +82,8 @@ import { Image } from 'astro:assets';
 				<div class="col-span-2 py-5 pr-10 text-slate-700 bg-zinc-200 p-5 rounded-sm shadow-sm">
 					<p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eos dolorem iste reprehenderit reiciendis veniam explicabo. Nemo laudantium corrupti pariatur eaque incidunt temporibus libero ratione consequuntur aliquam magnam repellat, enim soluta voluptas ipsam blanditiis debitis aperiam ducimus!</p><br>
 					<p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolor ex laboriosam. Temporibus quia sint quam illum dignissimos itaque ab, aliquid placeat nostrum repellat dicta optio eius atque illo doloremque accusamus officia eveniet perferendis praesentium, amet dolorem? Doloremque, sint veniam.</p>
-					<a href="/about"><button class="bg-red-500 text-white py-2 rounded-sm mt-5 w-56 smooth-btn">Click here for more!</button></a>
+					<a href="/about"><button class="bg-red-500 py-2 w-56 text-white font-bold  rounded-sm mt-5 hover:bg-red-600 my-transition text-md relative my-btn btn-under-anim ">Click here for more!</button></a>
+
 				</div>
 				<div class="flex justify-center blur-load-4 blurred-img">
 					<!-- <div class="mx-8"> -->
@@ -109,8 +109,8 @@ import { Image } from 'astro:assets';
 					<input class="px-5 py-2 bg-slate-600 text-gray-200 border border-gray-500 rounded-sm" type="email" name="" id="" placeholder="Email">
 					<input class="px-5 py-2 bg-slate-600 text-gray-200 border border-gray-500 rounded-sm" type="text" name="" id="" placeholder="Subject">
 					<textarea class="col-span-2 px-5 py-2 bg-slate-600 text-gray-200 border border-gray-500 rounded-sm" name="" id="" cols="30" rows="10" placeholder="Description"></textarea>
-
-					<button class="bg-red-500 text-white py-2 rounded-sm mt-5 w-32 hover:bg-red-600 my-transition shadow-sm">Submit</button>
+					
+					<button class="bg-red-500 text-white py-2 rounded-sm mt-5 w-32 hover:bg-red-700 my-transition shadow-sm">Submit</button>
 				</form>
 			</div>
 		</section>
@@ -136,9 +136,14 @@ import { Image } from 'astro:assets';
 		background-image: url(../images/homeImage4-small.jpg);
 		height: 20rem;
 	}
+	.smooth-btn{
+		transition: transform 750ms;
+	}
+	.smooth-btn:hover,.button:focus-visible{
+		transform: translateY(-0.2rem);
+		background-color: #dc2626;
+		transition: transform 250ms;
+	}
 </style>
-<script>
-
-</script>
 
 	

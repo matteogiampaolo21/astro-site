@@ -1,8 +1,9 @@
+import './Navbar.css'
 
 export const Navbar = () => {
 
     return(
-        <div className="my-active ">
+        <div className=" fixed z-40">
             
             <label className="hamburger-menu">
               <input type="checkbox" />
