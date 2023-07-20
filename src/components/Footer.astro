@@ -5,11 +5,16 @@ export interface Props {
 }
 
 const { pageTitle } = Astro.props;
+const year = new Date().getFullYear();
+
+
+
+
 ---
 <footer id="footer-my" data-title={pageTitle} class="bg-slate-900">
     <div class="grid grid-cols-3  mx-auto py-28 w-320 sm:w-500 md:w-768 xl:w-1280">
         
-        <div class=" text-gray-300 pr-10 pb-3 flex flex-col gap-y-5 col-span-3 sm:col-span-2 xl:pl-10 xl:col-span-1">
+        <div class=" text-gray-300 pr-10 pb-3 flex flex-col gap-y-5 col-span-3 sm:col-span-2 xl:col-span-1">
             <h1 class="text-2xl font-bold text-gray-200">Random Text</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing ab, odio consequatur voluptatem fugit dolore, facilis quia beatae praesentium!</p>
             <p><span class="text-red-500 font-bold">Phone</span>: 000 000 0000</p>
@@ -34,10 +39,14 @@ const { pageTitle } = Astro.props;
             <h1 class="text-gray-200 text-2xl font-bold mb-5">Come find us!</h1>
             <div id="mapFooter" style="height: 304px;" ></div>
         </div>
+        <div class="border-t border-slate-800 mx-auto mt-16 text-sm text-center text-slate-400 pt-5 w-320 sm:w-500 md:w-768 xl:w-1280">© Copyright {year} | astro-site.com | All right reserved.</div>
+        
+
         
     </div>
     <script>
         const titlePage = document.querySelector("#footer-my");
+        
         
         if (titlePage.dataset.title === "Contact"){
             var map = L.map('mapContact').setView([46.595, 7.907], 18);

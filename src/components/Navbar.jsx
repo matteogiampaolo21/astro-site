@@ -3,7 +3,7 @@ import './Navbar.css'
 export const Navbar = () => {
 
     return(
-        <div className=" fixed z-40">
+        <div className=" fixed z-50">
             
             <label className="hamburger-menu">
               <input type="checkbox" />

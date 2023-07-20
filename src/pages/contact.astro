@@ -8,35 +8,39 @@ import Layout from '../layouts/Layout.astro';
         <p>We are here for you.</p>
     </section>
     <section>
-        <div class="w-1280 mx-auto  my-24">
+        <div class="mx-auto  my-24 w-320 sm:w-500 md:w-768 xl:w-1280">
             <div class="grid grid-cols-5 mb-24">
-                <div class="col-span-2 flex flex-col gap-6 text-zinc-700 mr-10">
-                    <h1 class="text-3xl text-slate-900">Our Contacts</h1>
-                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quas fuga minima, sint sapiente animi nihil cum officiis voluptatum voluptates nemo, beatae esse accusantium reiciendis illo. Soluta!</p>
+                <div class=" grid grid-cols-7 gap-6 gap-x-0 text-zinc-700 col-span-5 md:col-span-5 xl:col-span-2 xl:mr-10">
 
-                    <div class="5">
+
+                    <div class="col-span-7">
+                        <h1 class="text-3xl text-slate-900 mb-3">Our Contacts</h1>
+                        <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quas fuga minima, sint sapiente animi nihil cum officiis voluptatum voluptates nemo, beatae esse accusantium reiciendis illo. Soluta!</p>
+                    </div>  
+
+                    <div class="col-span-7 sm:col-span-7 md:col-span-3 xl:col-span-7">
                         <h2 class="text-2xl text-slate-900">Address</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
 
-                    <div class="">
+                    <div class="col-span-7 sm:col-span-4 md:col-span-2 xl:col-span-7">
                         <h2 class="text-2xl  text-slate-900">Phone</h2>
                         <p>+00 000 000 0000</p>
                         <p>+00 000 000 0000</p>
                         <p>+00 000 000 0000</p>
                     </div>
 
-                    <div class="">
+                    <div class="col-span-7 sm:col-span-3 md:col-span-2  xl:col-span-7">
                         <h2 class="text-2xl text-slate-900">Email</h2>
                         <p>fake@email.com</p>
                     </div>
 
                 </div>
-                <div class="col-span-3">
+                <div class="col-span-3 mt-10 xl:mt-0">
 
 
-                    <h2 class="w-760 mx-auto text-slate-900 text-3xl border-b-4 border-red-500 pb-2 pl-2 mb-5">Contact Form</h2>
-				    <form class="grid grid-cols-2 gap-5 mx-auto w-760 content-center" action="">
+                    <h2 class=" mx-auto text-slate-900 text-3xl border-b-4 border-red-500 pb-2 pl-2 mb-5 w-320 sm:w-500 md:w-768 xl:w-760">Contact Form</h2>
+				    <form class="grid grid-cols-2 gap-5 mx-auto content-center w-320 sm:w-500 md:w-768 xl:w-760" action="">
                         <input class="px-5 py-2 bg-zinc-100 text-gray-300 border border-gray-400 rounded-sm" type="text" name="" id="" placeholder="Name">
                         <input class="px-5 py-2 bg-zinc-100 text-gray-300 border border-gray-400 rounded-sm" type="text" name="" id="" placeholder="Phone">
                         <input class="px-5 py-2 bg-zinc-100 text-gray-300 border border-gray-400 rounded-sm" type="email" name="" id="" placeholder="Email">
