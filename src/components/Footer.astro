@@ -7,9 +7,9 @@ export interface Props {
 const { pageTitle } = Astro.props;
 ---
 <footer id="footer-my" data-title={pageTitle} class="bg-slate-900">
-    <div class="grid grid-cols-3 w-1280 mx-auto py-28">
+    <div class="grid grid-cols-3  mx-auto py-28 w-320 sm:w-500 md:w-768 xl:w-1280">
         
-        <div class=" text-gray-300 px-10 pb-3 flex flex-col gap-y-5">
+        <div class=" text-gray-300 pr-10 pb-3 flex flex-col gap-y-5 col-span-3 sm:col-span-2 xl:pl-10 xl:col-span-1">
             <h1 class="text-2xl font-bold text-gray-200">Random Text</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing ab, odio consequatur voluptatem fugit dolore, facilis quia beatae praesentium!</p>
             <p><span class="text-red-500 font-bold">Phone</span>: 000 000 0000</p>
@@ -17,13 +17,10 @@ const { pageTitle } = Astro.props;
             <p><span class="text-red-500 font-bold" >Website</span><a href="https://www.google.com">: www.google.com</a></p>
         </div>
 
-        <div>
-            <h1 class="text-gray-200 text-2xl font-bold mb-5">Come find us!</h1>
-            <div id="mapFooter" style="height: 304px;" ></div>
-        </div>
         
         
-        <div class="pl-10">
+        
+        <div class="col-span-3 my-6 sm:my-0 sm:pr-12 sm:col-span-1">
             <h1 class="text-gray-200 text-2xl font-bold mb-5">See more:</h1>
             <ul class="flex flex-col text-lg gap-2 [&>*]:border-b-2 [&>*]:border-slate-800 [&>*]:pb-2 text-gray-300">
                 <li><a class="hover:text-red-500 " href="/">Home</a></li>
@@ -32,13 +29,18 @@ const { pageTitle } = Astro.props;
                 <li><a class="hover:text-red-500 " href="/contact" >Contact</a></li>
             </ul>
         </div>
+
+        <div class="col-span-3 xl:col-span-1 mt-8 xl:mt-0">
+            <h1 class="text-gray-200 text-2xl font-bold mb-5">Come find us!</h1>
+            <div id="mapFooter" style="height: 304px;" ></div>
+        </div>
         
     </div>
     <script>
         const titlePage = document.querySelector("#footer-my");
         
         if (titlePage.dataset.title === "Contact"){
-            var map = L.map('mapContact').setView([46.595, 7.907], 13);
+            var map = L.map('mapContact').setView([46.595, 7.907], 18);
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 19,
                 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -46,7 +48,7 @@ const { pageTitle } = Astro.props;
             var marker = L.marker([46.595, 7.907]).addTo(map);
         }
 
-        var map = L.map('mapFooter').setView([46.595, 7.907], 13);
+        var map = L.map('mapFooter').setView([46.595, 7.907], 18);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'

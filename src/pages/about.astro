@@ -14,25 +14,29 @@ import { Image } from 'astro:assets';
 		</div>
 	</section>
 	<section>
-		<div class="w-760 mx-auto  my-24 ">
+		<div class="w-320 sm:w-500 mx-auto my-24 xl:w-1280 md:w-768">
+
 			<h2 class="text-2xl border-l-4 border-red-500 mb-5 pl-2 font-bold text-slate-700">About Us</h2>
 			<div class="grid grid-cols-3">
-				<div class="blur-load-1 blurred-img"><Image quality={"low"} loading="lazy" src={aboutImage1} class="shadow-md rounded-sm h-380" alt='alley way'/></div>
-				<div class="ml-5 col-span-2">
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum explicabo error temporibus impedit doloribus quod, corrupti maxime, nulla, modi reiciendis adipisci fugit quisquam. Molestiae, cum numquam iste architecto aliquid repudiandae, reprehenderit doloremque debitis porro ipsam sint accusamus temporibus pariatur ut!</p>
+				<div class="blur-load-1 blurred-img col-span-3 xl:col-span-1"><Image quality={"low"} loading="lazy" src={aboutImage1} class="shadow-md rounded-sm h-500 object-cover" alt='alley way'/></div>
+				<div class="mt-5 col-span-3 xl:col-span-2 xl:ml-5">
+					<p>Eum explicabo error temporibus impedit doloribus quod, corrupti maxime, nulla, modi reiciendis adipisci fugit quisquam. Molestiae, cum numquam iste architecto aliquid repudiandae, reprehenderit doloremque debitis porro ipsam sint accusamus temporibus pariatur ut!</p>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, porro. Quo harum repellat earum maxime voluptatem ipsam laborum nam minus consequuntur, doloribus quam repudiandae iste qui possimus aliquam! Quibusdam debitis labore eius praesentium distinctio provident ex iusto! Nihil inventore laboriosam assumenda qui blanditiis quam maxime reiciendis voluptas in, repudiandae facilis distinctio minus.</p>
+					<p>Perferendis dolorem neque, dolor fuga iusto error quidem dolore a deleniti ullam, libero eaque iste perspiciatis ducimus ad praesentium corrupti repellat, animi totam facere hic fugiat ex quibusdam eligendi. Esse in rerum laborum, corporis facere est quas quibusdam exercitationem asperiores rem distinctio praesentium beatae expedita repellat sapiente. <br><br> Facere ipsa porro veritatis laboriosam velit excepturi architecto eum natus debitis perspiciatis dignissimos, possimus veniam vitae asperiores reiciendis atque temporibus quasi quod obcaecati laudantium esse maiores. Cum at in repudiandae ut placeat quam fugiat ratione enim aliquam expedita adipisci est, recusandae maxime, et doloribus! Totam, provident ducimus? Inventore totam itaque. </p>	
 				</div>
 			</div>
+
 			<br>
 			<div class="flex flex-row">
 				<p class="bg-zinc-300 p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quidem a unde possimus nemo cupiditate sit sint debitis saepe ullam, perspiciatis quisquam! Exercitationem consequatur ipsa quod maxime beatae laborum excepturi fugit consequuntur repellat eveniet dicta animi, incidunt dolore nihil, aperiam aspernatur ipsum eum nisi ex veniam, magnam sit nulla. Dolor dignissimos minus alias distinctio, harum impedit cum quasi dicta vel veritatis sunt blanditiis voluptas nihil possimus, labore recusandae mollitia ex iusto temporibus. Et amet atque repellat dolorum voluptate.</p>
 				<div class="border-r-4 border-slate-600 ml-2"></div>
 			</div>	
-			<div class="blur-load-2 blurred-img"><Image quality={"low"} loading='lazy' src={aboutImage2} class="shadow-md rounded-sm h-80 my-9 object-cover" alt="italian building"/></div>
+
+			<div class="blur-load-2 blurred-img"><Image quality={"low"} loading='lazy' src={aboutImage2} class="shadow-md rounded-sm h-380 my-9 object-cover" alt="italian building"/></div>
 			<h2 class="text-xl font-bold text-slate-700 border-l-4 border-slate-600 pl-2 my-5">This is some heading.</h2>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi a architecto distinctio saepe, incidunt accusamus deleniti reprehenderit beatae iure non consequatur quo. Praesentium, doloremque necessitatibus aliquid nesciunt deleniti ipsam dolores repudiandae a dolor dicta officia odit minus vel molestias sit. Amet quibusdam architecto recusandae, dignissimos optio voluptate accusamus qui voluptatem fugiat consequatur iure molestiae nostrum aut ratione repudiandae dolorum ipsa, maxime officiis veniam voluptatibus. Quis aliquam, eligendi blanditiis impedit quaerat fugit! Ipsum, maxime saepe mollitia inventore rem dolores odio eius nihil vitae velit esse et ut autem nulla corrupti beatae reiciendis iure magnam adipisci qui odit dicta quod repellat! Beatae, exercitationem enim officiis odit voluptatibus, illum maxime eius cumque deleniti ducimus, tempore tenetur.</p><br>
 
-			<ul class="list-disc ml-16 [&>*]:mb-3">
+			<ul class="list-disc text-neutral-700 ml-7 sm:ml-12 [&>*]:mb-3">
 				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus inventore maxime repellat amet.</li>
 				<li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
 				<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, nulla doloremque quisquam laudantium accusamus omnis?</li>
@@ -46,12 +50,12 @@ import { Image } from 'astro:assets';
 <style>
     .blur-load-1{
 		background-image: url(../images/aboutImage1-small.jpg);
-		height:380px;
+		height:500px;
 
 	}
     .blur-load-2{
 		background-image: url(../images/aboutImage2-small.jpg);
-		height: 20rem;
+		height: 380px;
 	}
 </style>
 

@@ -5,13 +5,23 @@ module.exports = {
 		extend: {
 			spacing:{
 				100: "100vh",
-				320: "320px",
+				
 				380: "380px",
 				500: "500px",
 				760: "760px",
+
+				320: "290px",
+				768: "728px",
 				1280: "1240px",
 			}
 		},
+		screens: {
+			'sm':'540px',
+			'md': '768px',
+      		'lg': '1024px',
+			'xl': '1280px',
+		}
+		
 	},
 	plugins: [],
 }
