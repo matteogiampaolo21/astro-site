@@ -42,7 +42,9 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		
+		<header class="bg-slate-700 pt-16 pb-5">
+			<img src="/logo-no-background.png" class="object-contain w-320 mx-auto sm:w-500 md:" alt="">
+		</header>	
 		<Navbar client:load />
 		<slot />
 		<Footer pageTitle={title}/>

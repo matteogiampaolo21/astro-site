@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
+import Carousel from '../components/Carousel.astro'
 
 
 import image1 from '../images/homeImage1.jpg';
@@ -13,25 +13,18 @@ const fillerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
 
 import { Image } from 'astro:assets';
 
+
 ---
 
 <Layout title="Home">
 	<div>
 		
-		<section style="height: 93vh;" class="bg-gray-100 grid grid-cols-2 justify-center  ">
-			<div class="typer-container flex flex-col justify-center my-10 ml-32 mr-20">
-				<h1 class="typed text-5xl py-5 text-slate-700 font-bold ">We fight for you.</h1>
-				<p class="text-neutral-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum fuga sunt, deleniti ducimus atque explicabo minima. Dicta aut recusandae veniam beatae voluptate reiciendis aspernatur eos unde molestiae nobis, minima ullam.</p>
-                <button class="bg-red-500 py-2 w-28 text-white font-bold  rounded-sm my-5 hover:bg-red-600 my-transition text-md relative my-btn btn-under-anim ">Click Me!</button>
-			</div>
-			<div>
-				
-			</div>
-		</section>
+		<Carousel/>
 
-		<section class="bg-slate-800 grid grid-cols-3 justify-center">
-			<div class="bg-slate-700 col-span-2"></div>
-			<div class="text-zinc-200 my-24 mx-auto w-96">
+		<section class="bg-slate-200 grid grid-cols-6 justify-center">
+			<div class=" col-span-2"></div>
+			<div class="col-span-2"></div>
+			<div class="text-zinc-800 my-24 mx-auto w-96 col-span-2">
 				<h1 class="text-3xl font-bold border-l-4 border-red-500 pl-2">Random text.</h1>
 				<p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ipsa earum blanditiis voluptas quos distinctio debitis ullam atque sit nobis. Ipsa, eius ut labore nihil cumque eaque qui nemo accusantium.</p><br>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque veritatis aut deserunt. Quam ratione consequuntur autem? Quis doloribus at eius aut deleniti inventore iure laboriosam.</p><br>
@@ -39,10 +32,10 @@ import { Image } from 'astro:assets';
 			</div>
 		</section>
 
-		<section class="bg-gray-200">
-			<div class="text-center pt-20 pb-12">
-				<h3 class="text-2xl text-slate-700 font-bold ">Take your Pick</h3>
-				<p class="text-slate-600 mt-3">Lorem ipsum dolor sit amet consectetur.</p>
+		<section class="bg-slate-700">
+			<div class="text-center pt-12 pb-12">
+				<h3 class="text-2xl text-slate-100 font-bold ">Take your Pick</h3>
+				<p class="text-slate-300 mt-3">Lorem ipsum dolor sit amet consectetur.</p>
 			</div>
 			<div class="grid grid-cols-3 gap-14 justify-between mx-auto pb-32 w-1280">
 

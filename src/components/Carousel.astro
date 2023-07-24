@@ -1,0 +1,185 @@
+---
+import image1 from '../images/homeImage1.jpg';
+import image2 from '../images/homeImage2.jpg';
+import image3 from '../images/homeImage3.jpg';
+import { Image } from 'astro:assets';
+---  
+<main class="slideshow-container">
+
+    <div class="mySlides fade blur-load-1 blurred-img">
+        <Image src={image1} loading="lazy" class="w-full object-cover my-brightness" quality="low" fit="cover" alt="nature" style="height:85vh" />
+        <div class="text text-5xl sm:text-7xl">Caption Text</div>
+        <div class="sub-text text-2xl ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quod eius sit aliquam cumque reiciendis magnam eveniet, aspernatur dolorum error omnis provident unde doloremque voluptatum alias odit laborum nemo! Sit?</div>
+    </div>
+
+    <div class="mySlides fade blur-load-2 blurred-img">
+        <Image src={image2} loading="lazy" class="w-full object-cover my-brightness" quality="low" fit="cover" alt="nature" style="height:85vh" />
+        <div class="text text-5xl sm:text-7xl">Caption Two</div>
+        <div class="sub-text text-2xl ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores minima molestias dicta, atque necessitatibus accusamus incidunt qui eum magnam voluptas commodi optio minus recusandae facere maxime nam!</div>
+    </div>
+
+    <div class="mySlides fade blur-load-3 blurred-img">
+        <Image src={image3} loading="lazy" class="w-full object-cover my-brightness" quality="low" fit="cover" alt="nature" style="height:85vh" />
+        <div class="text text-5xl sm:text-7xl">Caption Three</div>
+        <div class="sub-text text-2xl ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores vero possimus nesciunt est ducimus laboriosam, dolorem sunt nobis doloribus iste. Dicta recusandae distinctio nesciunt, deleniti minus officia vitae quaerat consectetur ex!</div>
+    </div>
+
+    <a class="prev" data-minusSlides >❮</a>
+    <a class="next" data-plusSlides >❯</a>
+
+</main>
+<style>
+    .blur-load-1{
+        background-image: url(../images/homeImage1-small.jpg);
+        
+		height: 85vh;
+    }
+    .blur-load-2{
+        background-image: url(../images/homeImage2-small.jpg);
+        
+		height: 85vh;
+    }
+    .blur-load-3{
+        background-image: url(../images/homeImage3-small.jpg);
+        
+		height: 85vh;
+    }
+    * {box-sizing: border-box}
+    .mySlides {display: none}
+    
+
+    /* Slideshow container */
+    .slideshow-container {
+        position: relative;
+        
+    }
+
+/* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 2s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        z-index: 60;
+    }
+
+/* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+/* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+/* Caption text */
+    .text {
+        color:white;
+        font-weight: 800;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 60%;
+        width: 75%;
+        line-height: 6rem;
+        left: 15%;
+    }
+    .sub-text{
+        color: #f5f5f5;
+        padding: 8px 12px;
+        position: absolute;
+        bottom:53%;
+        left: 15%;
+        width: 75%;
+    }@media (min-width: 540px) {.sub-text{bottom:45%}}
+
+/* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+/* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+/* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    } 
+
+    @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+
+/* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+        .prev, .next,.text {font-size: 11px}
+    }
+    .my-brightness{
+		filter: brightness(0.4);
+	}
+</style>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    const minusBtn = document.querySelector("[data-minusSlides]")
+    const plusBtn = document.querySelector("[data-plusSlides]")
+    const currentBtn = document.querySelectorAll("[data-currentSlides]")
+    
+    minusBtn.addEventListener('click', () => {plusSlides(-1)})
+    plusBtn.addEventListener('click', () => {plusSlides(1)})
+    currentBtn.forEach((button) => {
+        button.addEventListener('click', () => currentSlide(button.getAttribute("data-numberInfo")))
+    })
+
+
+    
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>;
+
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            console.log(slides[i])
+            slides[i].style.display = "none";  
+        }
+        slides[slideIndex-1].style.display = "block";  
+    }
+</script>
