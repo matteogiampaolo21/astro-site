@@ -7,21 +7,30 @@ import { Image } from 'astro:assets';
 <main class="slideshow-container">
 
     <div class="mySlides fade blur-load-1 blurred-img">
-        <Image src={image1} loading="lazy" class="w-full object-cover my-brightness" quality="low" fit="cover" alt="nature" style="height:85vh" />
-        <div class="text text-5xl sm:text-7xl">Caption Text</div>
-        <div class="sub-text text-2xl ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quod eius sit aliquam cumque reiciendis magnam eveniet, aspernatur dolorum error omnis provident unde doloremque voluptatum alias odit laborum nemo! Sit?</div>
+        <Image src={image1} loading="lazy" class="w-full object-cover my-brightness" quality="low" fit="cover" alt="nature" style="height:87vh" />
+        <div class="my-centered-text text-5xl text-center text-white w-320 sm:w-500 md:768 xl:w-1280">
+            <h1 class="font-bold mb-3">Random Text</h1>
+            <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt non praesentium quia quos quidem quibusdam alias itaque quasi, asperiores provident! Cum quos officia rerum, voluptates fuga eveniet libero similique esse provident neque.</p>
+        </div>
+        
+        <!-- <div class="text text-5xl sm:text-7xl">Caption Text</div>
+        <div class="sub-text text-2xl ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quod eius sit aliquam cumque reiciendis magnam eveniet, aspernatur dolorum error omnis provident unde doloremque voluptatum alias odit laborum nemo! Sit?</div> -->
     </div>
 
     <div class="mySlides fade blur-load-2 blurred-img">
-        <Image src={image2} loading="lazy" class="w-full object-cover my-brightness" quality="low" fit="cover" alt="nature" style="height:85vh" />
-        <div class="text text-5xl sm:text-7xl">Caption Two</div>
-        <div class="sub-text text-2xl ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores minima molestias dicta, atque necessitatibus accusamus incidunt qui eum magnam voluptas commodi optio minus recusandae facere maxime nam!</div>
+        <Image src={image2} loading="lazy" class="w-full object-cover my-brightness" quality="low" fit="cover" alt="nature" style="height:87vh" />
+        <div class="my-centered-text text-5xl text-center text-white w-320 sm:w-500 md:768 xl:w-1280">
+            <h1 class="font-bold mb-3">Random Text 1</h1>
+            <p class="text-xl">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias unde eaque tempore, officia libero facere explicabo! Iusto corrupti officiis ratione rerum veritatis sunt suscipit, ipsum odio nobis, obcaecati reprehenderit porro voluptates, minima similique saepe qui doloremque ea.</p>
+        </div>
     </div>
 
     <div class="mySlides fade blur-load-3 blurred-img">
-        <Image src={image3} loading="lazy" class="w-full object-cover my-brightness" quality="low" fit="cover" alt="nature" style="height:85vh" />
-        <div class="text text-5xl sm:text-7xl">Caption Three</div>
-        <div class="sub-text text-2xl ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores vero possimus nesciunt est ducimus laboriosam, dolorem sunt nobis doloribus iste. Dicta recusandae distinctio nesciunt, deleniti minus officia vitae quaerat consectetur ex!</div>
+        <Image src={image3} loading="lazy" class="w-full object-cover my-brightness" quality="low" fit="cover" alt="nature" style="height:87vh" />
+        <div class="my-centered-text text-5xl text-center text-white w-320 sm:w-500 md:768 xl:w-1280">
+            <h1 class="font-bold mb-3">Random Text 2</h1>
+            <p class="text-xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui in obcaecati quis atque deserunt tempora, dignissimos labore, deleniti ea itaque sequi amet ipsa sint at nam nobis id.</p>
+        </div>
     </div>
 
     <a class="prev" data-minusSlides >❮</a>
@@ -32,21 +41,26 @@ import { Image } from 'astro:assets';
     .blur-load-1{
         background-image: url(../images/homeImage1-small.jpg);
         
-		height: 85vh;
+		height: 87vh;
     }
     .blur-load-2{
         background-image: url(../images/homeImage2-small.jpg);
         
-		height: 85vh;
+		height: 87vh;
     }
     .blur-load-3{
         background-image: url(../images/homeImage3-small.jpg);
         
-		height: 85vh;
+		height: 87vh;
     }
     * {box-sizing: border-box}
-    .mySlides {display: none}
-    
+    .mySlides {display: none;position: relative; }
+    .my-centered-text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
     /* Slideshow container */
     .slideshow-container {
@@ -89,7 +103,6 @@ import { Image } from 'astro:assets';
         padding: 8px 12px;
         position: absolute;
         bottom: 60%;
-        width: 75%;
         line-height: 6rem;
         left: 15%;
     }
@@ -99,7 +112,6 @@ import { Image } from 'astro:assets';
         position: absolute;
         bottom:53%;
         left: 15%;
-        width: 75%;
     }@media (min-width: 540px) {.sub-text{bottom:45%}}
 
 /* Number text (1/3 etc) */
@@ -110,23 +122,6 @@ import { Image } from 'astro:assets';
         position: absolute;
         top: 0;
     }
-
-/* The dots/bullets/indicators */
-    .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-    }
-
-    .active, .dot:hover {
-        background-color: #717171;
-    }
-
 /* Fading animation */
     .fade {
         animation-name: fade;
@@ -143,7 +138,7 @@ import { Image } from 'astro:assets';
         .prev, .next,.text {font-size: 11px}
     }
     .my-brightness{
-		filter: brightness(0.4);
+		filter: brightness(0.3);
 	}
 </style>
 <script>

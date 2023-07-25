@@ -21,14 +21,12 @@ import { Image } from 'astro:assets';
 		
 		<Carousel/>
 
-		<section class="bg-slate-200 grid grid-cols-6 justify-center">
-			<div class=" col-span-2"></div>
-			<div class="col-span-2"></div>
-			<div class="text-zinc-800 my-24 mx-auto w-96 col-span-2">
+		<section class="bg-slate-200 justify-center mx-auto w-320 sm:w-500 md:w-768 xl:w-1280">
+			<div class=""></div>
+			<div class="text-zinc-800 my-24 mx-auto ">
 				<h1 class="text-3xl font-bold border-l-4 border-red-500 pl-2">Random text.</h1>
 				<p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ipsa earum blanditiis voluptas quos distinctio debitis ullam atque sit nobis. Ipsa, eius ut labore nihil cumque eaque qui nemo accusantium.</p><br>
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque veritatis aut deserunt. Quam ratione consequuntur autem? Quis doloribus at eius aut deleniti inventore iure laboriosam.</p><br>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, quo consectetur molestiae voluptatibus numquam alias. Facilis eveniet quibusdam, accusamus totam numquam sint rem placeat rerum quos excepturi nesciunt, quae hic maiores velit!</p>
 			</div>
 		</section>
 
@@ -39,23 +37,23 @@ import { Image } from 'astro:assets';
 			</div>
 			<div class="grid grid-cols-3 gap-14 justify-between mx-auto pb-32 w-1280">
 
-				<div class="flex flex-col-reverse bg-slate-100 p-5	 shadow-sm">
+				<div class="flex flex-col-reverse bg-slate-100 p-5	 shadow-xl">
 					<div class=" mx-auto">
 						<h2 class="text-center text-xl mt-4">Card 1</h2>
 						<p class="mt-1">{fillerText}</p>
 					</div>
-					<div class="blur-load-1 blurred-img"><Image loading="lazy" class="object-cover rounded-sm w-full shadow-md" src={image1} aspectRatio={"3:2"} quality={"low"} alt="nature"/></div>
+					<div class="blur-load-1 blurred-img"><Image loading="lazy" class="object-cover rounded-sm w-full " src={image1} aspectRatio={"3:2"} quality={"low"} alt="nature"/></div>
 
 				</div>
-				<div class="flex flex-col-reverse bg-slate-100 p-5	 shadow-sm">
+				<div class="flex flex-col-reverse bg-slate-100 p-5	 shadow-xl">
 					<div class=" mx-auto">
 						<h2 class="text-center text-xl mt-4">Card 2</h2>
 						<p class="mt-1">{fillerText}</p>
 					</div>
-					<div class="blur-load-2 blurred-img"><Image loading="lazy" class="object-cover rounded-sm w-full shadow-md" src={image2} aspectRatio={"3:2"} quality={"low"} alt="nature"/></div>
+					<div class="blur-load-2 blurred-img"><Image loading="lazy" class="object-cover rounded-sm w-full shadow-lg" src={image2} aspectRatio={"3:2"} quality={"low"} alt="nature"/></div>
 
 				</div>
-				<div class="flex flex-col-reverse bg-slate-100 p-5	 shadow-sm">
+				<div class="flex flex-col-reverse bg-slate-100 p-5	 shadow-xl">
 					<div class=" mx-auto">
 						<h2 class="text-center text-xl mt-4">Card 3</h2>
 						<p class="mt-1">{fillerText}</p>
@@ -70,7 +68,7 @@ import { Image } from 'astro:assets';
 		
 
 		<section class="bg-white">
-			<div class="grid grid-cols-3 gap-6 w-1280 mx-auto py-48 ">
+			<div class="grid grid-cols-3 gap-6 w-1280 mx-auto pb-20 pt-12 ">
 				<h2 class="text-3xl font-bold col-span-3 text-slate-800 mb-5 border-l-4 border-red-500 pl-2">About Us</h2>
 				<div class="col-span-2 py-5 pr-10 text-slate-700 bg-zinc-200 p-5 rounded-sm shadow-sm">
 					<p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eos dolorem iste reprehenderit reiciendis veniam explicabo. Nemo laudantium corrupti pariatur eaque incidunt temporibus libero ratione consequuntur aliquam magnam repellat, enim soluta voluptas ipsam blanditiis debitis aperiam ducimus!</p><br>
@@ -88,24 +86,39 @@ import { Image } from 'astro:assets';
 		
 
 
-		<section class="bg-slate-800 grid grid-cols-3 justify-center">
-			<div class="text-zinc-300 my-24 mx-auto  w-380">
-				<h1 class="text-3xl text-zinc-200 font-bold border-l-4 border-red-500 pl-2">Random text.</h1>
-				<p class="mt-3 break-all">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ipsa earum blanditiis voluptas quos distinctio debitis ullam atque sit nobis. Ipsa, eius ut labore nihil cumque eaque qui nemo accusantium.</p><br>
-				<p class="break-all	">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque veritatis aut deserunt. Quam ratione consequuntur autem? Quis doloribus at eius aut deleniti inventore iure laboriosam.</p><br>
-			</div>
-			<div class="bg-slate-700 py-20 col-span-2 py-auto flex content-center flex-col justify-center">
-				<h2 class="w-760 mx-auto text-gray-200 text-3xl font-bold border-b-4 border-red-500 pb-2 pl-2 mb-5">Contact Form</h2>
-				<form class="grid grid-cols-2 gap-5 mx-auto w-760 content-center" action="">
-					<input class="px-5 py-2 bg-slate-600 text-gray-200 border border-gray-500 rounded-sm" type="text" name="" id="" placeholder="Name">
-					<input class="px-5 py-2 bg-slate-600 text-gray-200 border border-gray-500 rounded-sm" type="text" name="" id="" placeholder="Phone">
-					<input class="px-5 py-2 bg-slate-600 text-gray-200 border border-gray-500 rounded-sm" type="email" name="" id="" placeholder="Email">
-					<input class="px-5 py-2 bg-slate-600 text-gray-200 border border-gray-500 rounded-sm" type="text" name="" id="" placeholder="Subject">
-					<textarea class="col-span-2 px-5 py-2 bg-slate-600 text-gray-200 border border-gray-500 rounded-sm" name="" id="" cols="30" rows="10" placeholder="Description"></textarea>
+		<section class="bg-slate-800">
+			
+			
+
+
+			<div class="mx-auto w-320 sm:w-500 md:w-768 xl:w-1280">
+				<div class="grid grid-cols-5 gap-x-10 py-24">
+
 					
-					<button class="bg-red-500 text-white py-2 rounded-sm mt-5 w-32 hover:bg-red-700 my-transition shadow-sm">Submit</button>
-				</form>
-			</div>
+						<aside class="text-zinc-300 col-span-2 w-500 pr-16">
+							<h1 class="text-3xl text-zinc-200 font-bold border-l-4 border-red-500 pl-2">Random text.</h1>
+							<p class="mt-3 break-words">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ipsa earum blanditiis voluptas quos distinctio debitis ullam atque sit nobis. Ipsa, eius ut labore nihil cumque eaque qui nemo accusantium.</p><br>
+							<p class="break-words">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque veritatis aut deserunt. Quam ratione consequuntur autem? Quis doloribus at eius aut deleniti inventore iure laboriosam.</p><br>
+						</aside>
+					
+
+						<article class="col-span-3 xl:w-768">
+							<h2 class="text-white text-3xl border-b-4 border-red-500 pb-2 pl-2 mb-5 w-320 sm:w-500 md:w-768">Contact Form</h2>
+							<form class="grid grid-cols-2 gap-5 mx-auto content-center w-320 sm:w-500 md:w-768 " action="">
+								<input class="px-5 py-2 bg-slate-900 text-gray-300 border border-gray-400 rounded-sm focus:border-gray-100" type="text" name="" id="" placeholder="Name">
+								<input class="px-5 py-2 bg-slate-900 text-gray-300 border border-gray-400 rounded-sm focus:border-gray-100" type="text" name="" id="" placeholder="Phone">
+								<input class="px-5 py-2 bg-slate-900 text-gray-300 border border-gray-400 rounded-sm focus:border-gray-100" type="email" name="" id="" placeholder="Email">
+								<input class="px-5 py-2 bg-slate-900 text-gray-300 border border-gray-400 rounded-sm focus:border-gray-100" type="text" name="" id="" placeholder="Subject">
+								<textarea class="col-span-2 px-5 py-2 bg-slate-900 text-gray-300 border border-gray-400 rounded-sm focus:border-gray-100" name="" id="" cols="30" rows="10" placeholder="Description"></textarea>
+
+								<button class="bg-red-500 text-white py-2 rounded-sm mt-5 w-32 hover:bg-red-600 my-transition shadow-sm">Submit</button>
+							</form>
+						</article>
+				</div>
+                    
+        	</div>
+
+
 		</section>
 
 
