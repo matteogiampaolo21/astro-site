@@ -35,30 +35,40 @@ import { Image } from 'astro:assets';
 				<h3 class="text-2xl text-slate-100 font-bold ">Take your Pick</h3>
 				<p class="text-slate-300 mt-3">Lorem ipsum dolor sit amet consectetur.</p>
 			</div>
-			<div class="grid grid-cols-3 gap-14 justify-between mx-auto pb-32 w-1280">
+			<div class="grid grid-cols-3 gap-14 justify-between mx-auto pb-32 w-320 sm:w-500 md:w-768 xl:w-1280">
 
-				<div class="flex flex-col-reverse bg-slate-100 p-5	 shadow-xl">
-					<div class=" mx-auto">
+				<div class="grid grid-cols-5 bg-slate-100 p-5 shadow-xl col-span-3 md:h-315 xl:h-fit xl:col-span-1 ">
+
+					<div class=" mx-auto col-span-5 order-last md:px-6 md:col-span-2 xl:col-span-5 ">
 						<h2 class="text-center text-xl mt-4">Card 1</h2>
 						<p class="mt-1">{fillerText}</p>
 					</div>
-					<div class="blur-load-1 blurred-img"><Image loading="lazy" class="object-cover rounded-sm w-full " src={image1} aspectRatio={"3:2"} quality={"low"} alt="nature"/></div>
+
+					<div class="blur-load-1 blurred-img col-span-5 md:col-span-3 xl:col-span-5"><Image loading="lazy" class="object-cover rounded-sm w-full" src={image1} aspectRatio={"3:2"} quality={"low"} alt="nature"/></div>
 
 				</div>
-				<div class="flex flex-col-reverse bg-slate-100 p-5	 shadow-xl">
-					<div class=" mx-auto">
+
+
+				<div class="grid grid-cols-5 bg-slate-100 p-5 shadow-xl col-span-3 md:h-315 xl:h-fit xl:col-span-1 ">
+
+					<div class=" mx-auto col-span-5 order-last md:px-6 md:mt-0 md:col-span-2 xl:col-span-5 ">
 						<h2 class="text-center text-xl mt-4">Card 2</h2>
 						<p class="mt-1">{fillerText}</p>
 					</div>
-					<div class="blur-load-2 blurred-img"><Image loading="lazy" class="object-cover rounded-sm w-full shadow-lg" src={image2} aspectRatio={"3:2"} quality={"low"} alt="nature"/></div>
+
+					<div class="blur-load-2 blurred-img col-span-5 md:col-span-3 xl:col-span-5"><Image loading="lazy" class="object-cover rounded-sm w-full " src={image2} aspectRatio={"3:2"} quality={"low"} alt="nature"/></div>
 
 				</div>
-				<div class="flex flex-col-reverse bg-slate-100 p-5	 shadow-xl">
-					<div class=" mx-auto">
+
+
+				<div class="grid grid-cols-5 bg-slate-100 p-5 shadow-xl col-span-3 md:h-315 xl:h-fit xl:col-span-1 ">
+
+					<div class="mx-auto col-span-5 order-last md:px-6 md:mt-0 md:col-span-2 xl:col-span-5 ">
 						<h2 class="text-center text-xl mt-4">Card 3</h2>
 						<p class="mt-1">{fillerText}</p>
 					</div>
-					<div class="blur-load-3 blurred-img"><Image loading="lazy" class="object-cover rounded-sm w-full shadow-md" src={image3} aspectRatio={"3:2"} quality={"low"} alt="nature"/></div>
+
+					<div class="blur-load-3 blurred-img col-span-5 md:col-span-3 xl:col-span-5"><Image loading="lazy" class="object-cover rounded-sm w-full " src={image3} aspectRatio={"3:2"} quality={"low"} alt="nature"/></div>
 
 				</div>
 
@@ -68,15 +78,15 @@ import { Image } from 'astro:assets';
 		
 
 		<section class="bg-white">
-			<div class="grid grid-cols-3 gap-6 w-1280 mx-auto pb-20 pt-12 ">
-				<h2 class="text-3xl font-bold col-span-3 text-slate-800 mb-5 border-l-4 border-red-500 pl-2">About Us</h2>
-				<div class="col-span-2 py-5 pr-10 text-slate-700 bg-zinc-200 p-5 rounded-sm shadow-sm">
+			<div class="grid grid-cols-3 gap-6 mx-auto pb-20 pt-12 w-320 sm:w-500 md:w-768 xl:w-1280">
+				<h2 class="text-3xl font-bold col-span-3 text-slate-800 mb-5 border-l-4 border-red-500 pl-2 order-first">About Us</h2>
+				<div class="col-span-3 py-5 pr-10 text-slate-700 bg-zinc-200 p-5 rounded-sm shadow-sm xl:col-span-2 sm:order-last xl:order-none">
 					<p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eos dolorem iste reprehenderit reiciendis veniam explicabo. Nemo laudantium corrupti pariatur eaque incidunt temporibus libero ratione consequuntur aliquam magnam repellat, enim soluta voluptas ipsam blanditiis debitis aperiam ducimus!</p><br>
 					<p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolor ex laboriosam. Temporibus quia sint quam illum dignissimos itaque ab, aliquid placeat nostrum repellat dicta optio eius atque illo doloremque accusamus officia eveniet perferendis praesentium, amet dolorem? Doloremque, sint veniam.</p>
 					<a href="/about"><button class="bg-red-500 py-2 w-56 text-white font-bold  rounded-sm mt-5 hover:bg-red-600 my-transition text-md relative my-btn btn-under-anim ">Click here for more!</button></a>
 
 				</div>
-				<div class="flex justify-center blur-load-4 blurred-img">
+				<div class="flex justify-center blur-load-4 blurred-img w-full col-span-3 xl:col-span-1 ">
 					<!-- <div class="mx-8"> -->
 						<Image loading='lazy' src={image4} quality={"low"} format="jpeg" class=" object-cover h-80   rounded-sm w-full shadow-md" alt=''/>
 					<!-- </div> -->
@@ -95,14 +105,14 @@ import { Image } from 'astro:assets';
 				<div class="grid grid-cols-5 gap-x-10 py-24">
 
 					
-						<aside class="text-zinc-300 col-span-2 w-500 pr-16">
+						<aside class="text-zinc-300 col-span-5 w-full xl:pr-16 xl:w-500 xl:col-span-2">
 							<h1 class="text-3xl text-zinc-200 font-bold border-l-4 border-red-500 pl-2">Random text.</h1>
 							<p class="mt-3 break-words">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ipsa earum blanditiis voluptas quos distinctio debitis ullam atque sit nobis. Ipsa, eius ut labore nihil cumque eaque qui nemo accusantium.</p><br>
 							<p class="break-words">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque veritatis aut deserunt. Quam ratione consequuntur autem? Quis doloribus at eius aut deleniti inventore iure laboriosam.</p><br>
 						</aside>
 					
 
-						<article class="col-span-3 xl:w-768">
+						<article class="col-span-5 w-full xl:col-span-3">
 							<h2 class="text-white text-3xl border-b-4 border-red-500 pb-2 pl-2 mb-5 w-320 sm:w-500 md:w-768">Contact Form</h2>
 							<form class="grid grid-cols-2 gap-5 mx-auto content-center w-320 sm:w-500 md:w-768 " action="">
 								<input class="px-5 py-2 bg-slate-900 text-gray-300 border border-gray-400 rounded-sm focus:border-gray-100" type="text" name="" id="" placeholder="Name">
@@ -129,15 +139,15 @@ import { Image } from 'astro:assets';
 	.blur-load-1{
 		background-image: url(../images/homeImage1-small.jpg);
 		height: 224px;
-	}
+	}@media only screen and (max-width: 1279px) {.blur-load-1{height: 275.1px;}}@media only screen and (max-width: 767px) {.blur-load-1{height: 306.6px;}}@media only screen and (max-width: 539px) {.blur-load-1{height: 166.6px;}}
 	.blur-load-2{
 		background-image: url(../images/homeImage2-small.jpg);
 		height: 224px;
-	}
+	}@media only screen and (max-width: 1279px) {.blur-load-2{height: 275.1px;}}@media only screen and (max-width: 767px) {.blur-load-2{height: 306.6px;}}@media only screen and (max-width: 539px) {.blur-load-2{height: 166.6px;}}
 	.blur-load-3{
 		background-image: url(../images/homeImage3-small.jpg);
 		height: 224px;
-	}
+	}@media only screen and (max-width: 1279px) {.blur-load-3{height: 275.1px;}}@media only screen and (max-width: 767px) {.blur-load-3{height: 306.6px;}}@media only screen and (max-width: 539px) {.blur-load-3{height: 166.6px;}}
 	.blur-load-4{
 		background-image: url(../images/homeImage4-small.jpg);
 		height: 20rem;

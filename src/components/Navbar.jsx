@@ -12,11 +12,11 @@ export const Navbar = () => {
           <li className='hidden flex-col justify-center hover:text-red-500 my-transition nav-xl:flex'><a href="/about">About</a></li>
           <li className='hidden flex-col justify-center hover:text-red-500 my-transition nav-xl:flex'><a href="/contact">Contact</a></li>
           <li className='ml-auto items-center hidden flex-row gap-x-6  mr-10 nav-xl:flex'>
-            <i class="fa-brands text-3xl fa-facebook hover:text-red-500 my-transition ml-16"></i>
-            <i class="fa-brands text-3xl fa-twitter hover:text-red-500 my-transition"></i>
-            <i class="fa-brands text-3xl fa-instagram hover:text-red-500 my-transition"></i>
+            <i className="fa-brands text-3xl fa-facebook hover:text-red-500 my-transition ml-16"></i>
+            <i className="fa-brands text-3xl fa-twitter hover:text-red-500 my-transition"></i>
+            <i className="fa-brands text-3xl fa-instagram hover:text-red-500 my-transition"></i>
           </li>
-        <li class="ml-auto flex flex-col mr-5 justify-center nav-xl:hidden">
+        <li className="ml-auto flex flex-col mr-5 justify-center nav-xl:hidden">
           <input className='w-8 h-8 rounded' type="checkbox" />
         </li>
         </ul>
