@@ -1,5 +1,6 @@
 ---
 import { Navbar } from '../components/Navbar.jsx';
+import MyNavbar from '../components/My-Navbar.astro';
 import  Footer  from '../components/Footer.astro'
 
 export interface Props {
@@ -42,8 +43,8 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		
-		<Navbar client:load />
+		<MyNavbar client:load/>
+		<!-- <Navbar client:load /> -->
 		<slot />
 		<Footer pageTitle={title}/>
 		

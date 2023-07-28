@@ -1,0 +1,14 @@
+.header{
+    background-color: #1e293b;
+    position: relative;
+    color:white;
+    z-index: 100;
+}
+.logo{
+    margin: 0;
+}
+.open-nav-list{
+    padding: 20px 0 20px 20px;
+    font-size: 1.2rem;
+    
+}
