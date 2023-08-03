@@ -7,6 +7,11 @@
 .logo{
     margin: 0;
 }
+.nav-list li a:hover{
+    color:#ef4444;
+    
+    transition: 0.3s;
+}
 .open-nav-list{
     padding: 20px 0 20px 20px;
     font-size: 1.2rem;

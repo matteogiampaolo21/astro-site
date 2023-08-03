@@ -1,5 +1,4 @@
 ---
-import { Navbar } from '../components/Navbar.jsx';
 import MyNavbar from '../components/My-Navbar.astro';
 import  Footer  from '../components/Footer.astro'
 
@@ -43,8 +42,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<MyNavbar client:load/>
-		<!-- <Navbar client:load /> -->
+		<MyNavbar/>
 		<slot />
 		<Footer pageTitle={title}/>
 		
@@ -104,8 +102,6 @@ const { title } = Astro.props;
 	.my-btn.btn-under-anim:focus::before{
 		transform: scaleX(1);
 	}
-
-
 	.my-btn.btn-slide-anim::before{
 		content: '';
 		position: absolute;
@@ -124,7 +120,6 @@ const { title } = Astro.props;
 	.my-btn.btn-slide-anim:focus::before{
 		transform: scaleX(1);
 	}
-
 	.my-btn.btn-slide-anim{
 		transition: color 300ms ease-in-out;
 		z-index: 1;
